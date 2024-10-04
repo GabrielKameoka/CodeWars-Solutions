@@ -1,0 +1,25 @@
+using System;
+namespace Divisors
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Divisors(100);
+        }
+        public static void Divisors(int n)
+        {
+            int sumOfDivisors = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                if (n % i == 0)
+                {
+                    double result = n / i;
+                    System.Console.WriteLine($"{n} dividido por {i} é igual a: {result}");
+                    sumOfDivisors++;
+                }
+            }
+            System.Console.WriteLine($"Total de divisores de {n} é {sumOfDivisors}");
+        }
+    }
+}
